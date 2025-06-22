@@ -51,6 +51,9 @@ const Projects = () => {
     
   ];
 
+  // Debug: Log the projects data to check image paths
+  console.log('Projects component rendered with images:', projects.map(p => p.image));
+
   return (
     <section id="projects" className="py-20 px-4">
       <div className="max-w-7xl mx-auto">
@@ -81,6 +84,13 @@ const Projects = () => {
                       src={project.image}
                       alt={project.title}
                       className="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-110"
+                      onError={(e) => {
+                        console.error(`Failed to load image: ${project.image}`);
+                        e.currentTarget.style.display = 'none';
+                      }}
+                      onLoad={() => {
+                        console.log(`Successfully loaded image: ${project.image}`);
+                      }}
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center space-x-4">
                       {project.liveUrl !== '#' && (

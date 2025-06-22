@@ -57,6 +57,13 @@ const About = () => {
                       src="/images/profile.png"
                       alt="Abhishek M.K" 
                       className="w-full h-full object-cover"
+                      onError={(e) => {
+                        console.error('Failed to load profile image');
+                        e.currentTarget.style.display = 'none';
+                      }}
+                      onLoad={() => {
+                        console.log('Successfully loaded profile image');
+                      }}
                     />
                   </div>
 
