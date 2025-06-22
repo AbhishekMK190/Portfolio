@@ -20,8 +20,9 @@ const corsOptions = {
     process.env.FRONTEND_URL || 'http://localhost:5173',
     'https://portfolio-production-9289.up.railway.app',
     'https://*.up.railway.app',
-    'https://portfolio-merww3e7g-abhishekmks-projects-456f27a9.vercel.app',
-    'https://*.vercel.app'
+    'https://portfolio-ew1mboet7-abhishekmks-projects-456f27a9.vercel.app',
+    'https://*.vercel.app',
+    'https://portfolio-nine-indol-74.vercel.app'
   ],
   credentials: true,
   optionsSuccessStatus: 200
