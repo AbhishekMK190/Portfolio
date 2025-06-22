@@ -2,6 +2,13 @@ import React from 'react';
 import { useIntersectionObserver } from '../hooks/useIntersectionObserver';
 import { ExternalLink, Github, Play } from 'lucide-react';
 
+// Import images as a backup solution
+import phishingImg from '/images/phishingImg.png';
+import chessMaster from '/images/ChessMaster.png';
+import unknownJourney from '/images/unknownJourney.png';
+import pwdAnalyzer from '/images/PwdAnalyzer.png';
+import pingPongGame from '/images/PingPongGame.png';
+
 const Projects = () => {
   const [ref, isVisible] = useIntersectionObserver({ threshold: 0.1 });
 
@@ -10,7 +17,7 @@ const Projects = () => {
     {
       title: 'Phishing Domain Detection Using Deep Learning',
       description: 'Detects phishing domains using deep learning by analyzing URL patterns with real-time testing support.',
-      image: '/images/phishingImg.png',
+      image: phishingImg,
       tech: ['Python', 'TensorFlow/Keras', 'Pandas', 'NumPy', 'Scikit-learn', 'Matplotlib', 'Flask', 'Jupyter Notebook'],
       liveUrl: '#',
       githubUrl: 'https://github.com/AbhishekMK190/Phishing-Domain-Detection-using-Deep-learning'
@@ -19,7 +26,7 @@ const Projects = () => {
     {
       title: 'Chess Web App',
       description: 'A chess application with AI opponent.',
-      image: '/images/ChessMaster.png',
+      image: chessMaster,
       tech: ['JavaScript', 'Typescript', 'Node.js', 'Tailwind CSS'],
       liveUrl: 'https://spontaneous-yeot-3e0563.netlify.app',
       githubUrl: 'https://github.com/AbhishekMK190/chessMaster.github.io'
@@ -27,7 +34,7 @@ const Projects = () => {
     {
       title: 'The Unknown Journey',
       description: 'A 2D adventure game with immersive storytelling and journey till the end.',
-      image: '/images/unknownJourney.png',
+      image: unknownJourney,
       tech: ['Godot', 'GD script'],
       liveUrl: '#',
       githubUrl: 'https://github.com/AbhishekMK190/The-Unknown-Journey'
@@ -35,7 +42,7 @@ const Projects = () => {
     {
       title: 'ML-Based Password Strength Analyzer',
       description: 'A ML based password strength analyzer that is useful to Accurately determine The strength of the password.',
-      image: '/images/PwdAnalyzer.png',
+      image: pwdAnalyzer,
       tech: ['Python', 'Tkinter', 'Scikit-learn', 'Pandas', 'Joblib', 'Regex'],
       liveUrl: '#',
       githubUrl: 'https://github.com/AbhishekMK190/ML-based-Password-Strength-Analyzer'
@@ -43,7 +50,7 @@ const Projects = () => {
     {
       title: 'Network based Ping Pong Game',
       description: 'A simple network-based Ping Pong game with a server-client model. Two players can connect over the same network and play from separate computers.', 
-      image: '/images/PingPongGame.png',
+      image: pingPongGame,
       tech: ['Python', 'Pygame', 'Socket Programming', 'Multithreading'],
       liveUrl: '#',
       githubUrl: 'https://github.com/AbhishekMK190/Network-based-Ping-Pong-game'

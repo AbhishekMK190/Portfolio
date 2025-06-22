@@ -1,5 +1,6 @@
 import React from 'react';
 import { useIntersectionObserver } from '../hooks/useIntersectionObserver';
+import profileImg from '/images/profile.png';
 
 const About = () => {
   const [ref, isVisible] = useIntersectionObserver({ threshold: 0.3 });
@@ -54,7 +55,7 @@ const About = () => {
                 <div className="text-center">
                   <div className="w-40 h-30 mx-auto mb-6 rounded-full overflow-hidden border-4 border-purple-500 shadow-lg">
                     <img 
-                      src="/images/profile.png"
+                      src={profileImg}
                       alt="Abhishek M.K" 
                       className="w-full h-full object-cover"
                       onError={(e) => {
