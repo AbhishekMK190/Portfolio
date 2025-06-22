@@ -22,6 +22,9 @@ const Contact = () => {
 
     // Use environment variable for API URL, fallback to localhost for development
     const apiUrl = import.meta.env.VITE_API_URL || 'http://localhost:3001';
+    
+    // Debug: Log the API URL being used
+    console.log('Using API URL:', apiUrl);
 
     try {
       const response = await fetch(`${apiUrl}/api/contact`, {
